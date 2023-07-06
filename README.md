@@ -1,3 +1,50 @@
+- Instalar Python;
+- Instalar virtualenv;
+- Criar pasta do projeto e lançar no VS Code;
+- Abrir o terminal (Ctrl J);
+
+- Digitar: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+virtualenv venv
+(Para criar o ambiente virtual com a pasta)
+
+.\venv\Scripts\activate
+(Para ativar o ambiente)
+* Para desativa-lo basta digitar: deactivate;
+* Caso a ativação der um erro de "[...] execução de scripts foi desabilitada neste sistema. [...]", vá ao PowerShell e digite: Set-ExecutionPolicy Unrestricted,
+depois digite A.
+
+pip install freeze
+(Para saber as versões dos pacotes instalados)
+
+pip freeze > requirements.txt
+(Para criar um arquivo com as informações dos pacotes instalados)
+
+django-admin help
+(Para ver todos os comandos do django)
+
+django-admin startproject setup .
+(Para criar a pasta do projeto django)
+
+python manage.py runserver
+(Para executar o projeto)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Vá a settings.py para mudar configurações como idioma(pt-br) e hora(America/Sao_Paulo).
+
+*************************************************************
+PARA EVITAR QUE SUA CHAVE SECRETA VAZE:
+pip install python-dotenv
+
+Crie o arquivo .env e coloque a linha da secret_key sem aspas.
+
+Depois importe o os na linha 13 e from dotenv import load_dotenv
+load_dotenv()
+
+E na secret_key coloque: str(os.getenv("SECRET_KEY"))
+
+
+==============================================================
 Sendo Assim vamos enviar o projeto para o GitHub
 
 Primeiro crie um novo repositório no +;
